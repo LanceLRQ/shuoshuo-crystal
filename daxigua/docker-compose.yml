@@ -1,0 +1,12 @@
+version: "2"
+
+services:
+    web:
+        image: nginx
+        container_name: shuoshuo-daxigua-server-web
+        ports:
+            - "9080:80"
+        volumes:
+            - ./web.conf:/etc/nginx/conf.d/web.conf
+            - ./:/web
+        restart: always
