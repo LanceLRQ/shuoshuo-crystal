@@ -1,0 +1,40 @@
+@import '~antd/dist/antd.css';
+@import 'color';
+
+body, html, #root {
+    overflow: hidden;
+    height: 100%;
+}
+
+@font-face {
+    font-family: "QianTuXiaoTu";
+    src: url('../images/fonts/qiantuxiaotu.ttf');
+}
+
+.layout-main {
+    &-frame {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+    &-content {
+        flex: 1 1 auto;
+        overflow: auto;
+    }
+     &-header {
+         padding: 0;
+         flex: 0 0 auto;
+         background: $white;
+         box-shadow: 0 4px 4px rgba(0, 0, 0, .05);
+         .ant-menu-horizontal>.ant-menu-item:after, .ant-menu-horizontal>.ant-menu-submenu:after{
+             inset: 0 8px auto;
+             border-width: 2px;
+         }
+    }
+    &-footer {
+        opacity: .2;
+        padding: 4px;
+        position: fixed;
+        bottom: 0;
+    }
+}
